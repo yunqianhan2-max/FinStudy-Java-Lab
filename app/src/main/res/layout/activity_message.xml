@@ -1,0 +1,43 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tv_received_message"
+                style="@style/CardText"
+                android:text="" />
+            <EditText
+                android:id="@+id/et_reply"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:inputType="textCapSentences"
+                android:hint="填写回复并返回上一页"
+                android:maxLength="100" />
+            <Button
+                android:id="@+id/btn_return_reply"
+                style="@style/ActionButton"
+                android:text="携带结果返回" />
+            <TextView
+                android:id="@+id/message_note"
+                style="@style/Caption"
+                android:text="点击顶部返回仅关闭页面；点击此按钮会先 setResult(RESULT_OK, intent)，再 finish()。" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_identity" />
+</LinearLayout>

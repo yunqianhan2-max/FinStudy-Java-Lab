@@ -1,0 +1,47 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tv_statistics_summary"
+                style="@style/CardText"
+                android:text="" />
+            <TextView
+                android:id="@+id/stats_chapter_heading"
+                style="@style/Heading"
+                android:text="各章最近一次完整测验" />
+            <TextView
+                android:id="@+id/tv_chapter_rates"
+                style="@style/Body"
+                android:text="" />
+            <TextView
+                android:id="@+id/stats_history_heading"
+                style="@style/Heading"
+                android:text="最近测验记录" />
+            <TextView
+                android:id="@+id/tv_attempt_history"
+                style="@style/Body"
+                android:text="" />
+            <TextView
+                android:id="@+id/stats_note"
+                style="@style/Caption"
+                android:text="累计答题量包含已提交的章节测验和错题重练；各章成绩只读取最近一次完整章节测验。" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_identity" />
+</LinearLayout>

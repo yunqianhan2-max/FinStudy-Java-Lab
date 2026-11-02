@@ -1,0 +1,102 @@
+[
+  {
+    "key": "text",
+    "title": "TextView：文字、字号与颜色",
+    "className": "DemoText",
+    "layout": "demo_lab_text",
+    "knowledge": "c4k1",
+    "goal": "观察 XML 默认文字被 Java 的 setText、setTextSize 和 setTextColor 改变。",
+    "prediction": "先猜一猜：运行后文字会变成什么？字号和颜色会怎样？",
+    "tryText": "运行后应看到 24sp 的玫红色“欢迎学习 Android！”。切换 XML 和 Java，找出三处变化的原因。"
+  },
+  {
+    "key": "layout",
+    "title": "LinearLayout：横排与竖排",
+    "className": "DemoLayout",
+    "layout": "demo_lab_layout",
+    "knowledge": "c3k3",
+    "goal": "用 orientation 控制同一组子控件横向或纵向排列。",
+    "prediction": "XML 中 orientation=\"horizontal\"，控件 A、B 初始会如何摆放？",
+    "tryText": "点击预览中的“切换为纵向排列”，再点一次切回横向。对照 Java 的 setOrientation。"
+  },
+  {
+    "key": "button",
+    "title": "Button：点击后修改文字",
+    "className": "DemoButton",
+    "layout": "demo_lab_button",
+    "knowledge": "c4k2",
+    "goal": "点击事件进入 onClick，然后通过 TextView.setText 更新界面。",
+    "prediction": "运行只会显示按钮；还需要点击预览中的“开始学习”，才会执行 onClick。",
+    "tryText": "点击“开始学习”，文字应从“等待按钮点击”变成“欢迎学习 Android！”。重新运行可恢复。"
+  },
+  {
+    "key": "radio",
+    "title": "RadioGroup：同组只能选一个",
+    "className": "DemoRadio",
+    "layout": "demo_lab_radio",
+    "knowledge": "c4k3",
+    "goal": "RadioGroup 中的两个 RadioButton 互斥，监听器读取当前选项。",
+    "prediction": "尝试先选“课前预习”再选“课后复习”，前一个会不会仍然选中？",
+    "tryText": "在两个选项之间切换，观察选中状态和下方文字。两个按钮放在同一 RadioGroup 内。"
+  },
+  {
+    "key": "check",
+    "title": "CheckBox：同时选择多个",
+    "className": "DemoCheck",
+    "layout": "demo_lab_check",
+    "knowledge": "c4k4",
+    "goal": "每个 CheckBox 独立保存状态，用 isChecked 组合选中的文字。",
+    "prediction": "Java 和 XML 可以同时选中吗？取消一个后输出会如何变化？",
+    "tryText": "任选多个选项，再取消其中一个；观察“已选”内容随复选状态更新。"
+  },
+  {
+    "key": "seek",
+    "title": "SeekBar：拖动改变图片透明度",
+    "className": "DemoSeek",
+    "layout": "demo_lab_seek",
+    "knowledge": "c4k5",
+    "goal": "SeekBar 的 0–100 进度除以 100f，映射到图片的 0–1 alpha。",
+    "prediction": "把滑块移到 50，progress / 100f 的值是多少？",
+    "tryText": "依次拖到 100、50、0，观察图片不透明、半透明、完全透明的效果及数值。"
+  },
+  {
+    "key": "rating",
+    "title": "RatingBar：五颗星与半星评分",
+    "className": "DemoRating",
+    "layout": "demo_lab_rating",
+    "knowledge": "c4k6",
+    "goal": "XML 的 numStars、stepSize 定义评分范围与精度，Java 读取浮点星级。",
+    "prediction": "stepSize=\"0.5\" 时，能否给出 3.5 星？",
+    "tryText": "触摸或拖动星星，尝试选 3.5 星，观察下方评分。"
+  },
+  {
+    "key": "spinner",
+    "title": "Spinner：下拉选择与适配器",
+    "className": "DemoSpinner",
+    "layout": "demo_lab_spinner",
+    "knowledge": "c4k8",
+    "goal": "ArrayAdapter 把三个字符串连接到 Spinner，选择回调更新文字。",
+    "prediction": "Java 中 topics 数组的三项，会显示到哪个控件里？",
+    "tryText": "点开下拉框选择“XML 布局”，观察已选内容。初次运行通常自动选中第一项。"
+  },
+  {
+    "key": "list",
+    "title": "ListView：列表与点击事件",
+    "className": "DemoList",
+    "layout": "demo_lab_list",
+    "knowledge": "c4k8",
+    "goal": "同一个数组通过 ArrayAdapter 变成纵向列表，点击行后读取对应文字。",
+    "prediction": "点击列表的第三项，输出会是哪一个控件名称？",
+    "tryText": "分别点击 TextView、SeekBar 等条目，观察下方“点击了”文字。"
+  },
+  {
+    "key": "grid",
+    "title": "GridView：三列网格",
+    "className": "DemoGrid",
+    "layout": "demo_lab_grid",
+    "knowledge": "c4k7",
+    "goal": "GridView 用 numColumns=\"3\" 将六项内容排列成三列网格。",
+    "prediction": "六个条目，每行三列，一共会显示几行？",
+    "tryText": "观察三列两行布局，点击任意条目，对照 OnItemClickListener 的输出。"
+  }
+]

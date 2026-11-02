@@ -1,0 +1,38 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <Spinner
+            android:id="@+id/sp_wrong_chapter"
+            android:layout_width="match_parent"
+            android:layout_height="56dp" />
+        <CheckBox
+            android:id="@+id/cb_show_mastered"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="同时显示已掌握的错题" />
+    </LinearLayout>
+    <TextView
+        android:id="@+id/tv_wrong_empty"
+        style="@style/CardText"
+        android:text="暂无错题，继续保持"
+        android:gravity="center" />
+    <ListView
+        android:id="@+id/lv_wrong"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp" />
+    <include layout="@layout/view_identity" />
+</LinearLayout>

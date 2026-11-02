@@ -1,0 +1,132 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <ScrollView
+        android:id="@+id/lab_page_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/lab_intro"
+                style="@style/Caption"
+                android:text="先读代码，点击运行，再操作预览中的真实 Android 控件。" />
+            <TextView
+                android:id="@+id/lab_choose_heading"
+                style="@style/Heading"
+                android:text="1  选择代码示例" />
+            <Spinner
+                android:id="@+id/sp_lab_example"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+            <TextView
+                android:id="@+id/tv_lab_goal"
+                style="@style/CardText"
+                android:text="" />
+            <TextView
+                android:id="@+id/lab_code_heading"
+                style="@style/Heading"
+                android:text="2  查看示例代码" />
+            <RadioGroup
+                android:id="@+id/rg_lab_code_type"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <RadioButton
+                    android:id="@+id/rb_lab_xml"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="XML 布局" />
+                <RadioButton
+                    android:id="@+id/rb_lab_java"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:minHeight="48dp"
+                    android:text="Java 代码" />
+            </RadioGroup>
+            <TextView
+                android:id="@+id/tv_lab_source_file"
+                style="@style/Caption"
+                android:text="" />
+            <TextView
+                android:id="@+id/tv_lab_source"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:background="@color/pink"
+                android:padding="12dp"
+                android:textColor="@color/ink"
+                android:textSize="13sp"
+                android:fontFamily="monospace"
+                android:gravity="top|start"
+                android:scrollbars="vertical"
+                android:textIsSelectable="true" />
+            <Button
+                android:id="@+id/btn_lab_full_code"
+                style="@style/ActionButton"
+                android:text="展开完整代码" />
+            <TextView
+                android:id="@+id/tv_lab_prediction"
+                style="@style/Caption"
+                android:text="" />
+            <Button
+                android:id="@+id/btn_lab_run"
+                style="@style/ActionButton"
+                android:text="运行这段示例" />
+            <Button
+                android:id="@+id/btn_lab_reset"
+                style="@style/ActionButton"
+                android:text="重新运行，恢复初始效果" />
+            <TextView
+                android:id="@+id/lab_preview_heading"
+                style="@style/Heading"
+                android:text="3  运行效果" />
+            <TextView
+                android:id="@+id/tv_lab_run_status"
+                style="@style/Caption"
+                android:text="尚未运行。阅读代码后点击“运行这段示例”。" />
+            <FrameLayout
+                android:id="@+id/lab_preview"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="120dp"
+                android:background="@drawable/bg_card">
+                <TextView
+                    android:id="@+id/tv_lab_preview_empty"
+                    android:layout_width="match_parent"
+                    android:layout_height="120dp"
+                    android:padding="20dp"
+                    android:gravity="center"
+                    android:text="点击运行后，在这里显示代码的效果"
+                    android:textSize="16sp"
+                    android:textColor="@color/muted" />
+            </FrameLayout>
+            <TextView
+                android:id="@+id/tv_lab_try"
+                style="@style/Caption"
+                android:text="" />
+            <TextView
+                android:id="@+id/lab_runtime_scope"
+                style="@style/Caption"
+                android:text="示例代码可查看和复制。运行会加载该示例的 XML 并执行对应 Java 方法。" />
+            <Button
+                android:id="@+id/btn_lab_navigation"
+                style="@style/ActionButton"
+                android:text="第五章：页面跳转与 Fragment 实验" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_identity" />
+</LinearLayout>

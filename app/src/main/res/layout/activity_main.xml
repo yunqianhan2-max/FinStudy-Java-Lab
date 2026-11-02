@@ -1,0 +1,97 @@
+<?xml version='1.0' encoding='utf-8'?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/page">
+    <include
+        android:id="@+id/home_toolbar"
+        layout="@layout/view_toolbar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <include
+        android:id="@+id/home_identity"
+        layout="@layout/view_identity"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintTop_toBottomOf="@id/home_toolbar"
+        app:layout_constraintBottom_toTopOf="@id/home_identity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/home_heading"
+                style="@style/Heading"
+                android:text="Android 课程学习助手" />
+            <TextView
+                android:id="@+id/home_subtitle"
+                style="@style/Caption"
+                android:text="金融系统应用开发与实践" />
+            <TextView
+                android:id="@+id/tv_progress"
+                style="@style/CardText"
+                android:text="学习进度" />
+            <ProgressBar
+                android:id="@+id/pb_progress"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="match_parent"
+                android:layout_height="12dp"
+                android:max="100" />
+            <Button
+                android:id="@+id/btn_continue"
+                style="@style/ActionButton"
+                android:text="继续学习" />
+            <TextView
+                android:id="@+id/home_section"
+                style="@style/Heading"
+                android:text="学习空间" />
+            <Button
+                android:id="@+id/btn_course"
+                style="@style/ActionButton"
+                android:text="课程学习" />
+            <Button
+                android:id="@+id/btn_quiz"
+                style="@style/ActionButton"
+                android:text="章节测验" />
+            <Button
+                android:id="@+id/btn_lab"
+                style="@style/ActionButton"
+                android:text="代码与效果实验室" />
+            <Button
+                android:id="@+id/btn_navigation"
+                style="@style/ActionButton"
+                android:text="第五章：页面跳转实验" />
+            <Button
+                android:id="@+id/btn_wrong"
+                style="@style/ActionButton"
+                android:text="错题本" />
+            <Button
+                android:id="@+id/btn_favorites"
+                style="@style/ActionButton"
+                android:text="重点收藏" />
+            <Button
+                android:id="@+id/btn_statistics"
+                style="@style/ActionButton"
+                android:text="学习统计" />
+            <TextView
+                android:id="@+id/tv_summary"
+                style="@style/Caption"
+                android:text="" />
+        </LinearLayout>
+    </ScrollView>
+</androidx.constraintlayout.widget.ConstraintLayout>

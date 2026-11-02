@@ -1,0 +1,24 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.finstudy.app'
+    compileSdk 35
+    defaultConfig {
+        applicationId 'com.finstudy.app'
+        minSdk 26
+        targetSdk 35
+        versionCode 3
+        versionName '2.1-code-lab'
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+}
+
+dependencies {
+    // 第三章约束布局库，由 Java 实现。本工程不应用 Kotlin 插件。
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+}

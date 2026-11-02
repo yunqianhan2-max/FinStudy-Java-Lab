@@ -1,0 +1,21 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <TextView
+        android:id="@+id/tv_favorites_empty"
+        style="@style/CardText"
+        android:text="暂无收藏。打开知识详情，点击星形按钮即可收藏。" />
+    <ListView
+        android:id="@+id/lv_favorites"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp" />
+    <include layout="@layout/view_identity" />
+</LinearLayout>

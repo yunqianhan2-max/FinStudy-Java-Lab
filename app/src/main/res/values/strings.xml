@@ -1,0 +1,6 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">FinStudy</string>
+    <string name="identity">姓名：韩云倩　学号：2401050210</string>
+    <string name="back">返回</string>
+</resources>

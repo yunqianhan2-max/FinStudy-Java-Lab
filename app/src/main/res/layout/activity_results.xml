@@ -1,0 +1,39 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+        <TextView
+            android:id="@+id/tv_result_summary"
+            style="@style/CardText"
+            android:text="" />
+    </LinearLayout>
+    <ListView
+        android:id="@+id/lv_results"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:padding="12dp" />
+    <Button
+        android:id="@+id/btn_retry"
+        style="@style/ActionButton"
+        android:text="再练一次" />
+    <Button
+        android:id="@+id/btn_result_wrong"
+        style="@style/ActionButton"
+        android:text="查看错题本" />
+    <Button
+        android:id="@+id/btn_result_home"
+        style="@style/ActionButton"
+        android:text="返回首页" />
+    <include layout="@layout/view_identity" />
+</LinearLayout>

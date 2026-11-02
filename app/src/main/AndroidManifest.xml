@@ -1,0 +1,27 @@
+<?xml version='1.0' encoding='utf-8'?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android">
+    <application
+        android:label="@string/app_name"
+        android:icon="@drawable/ic_book"
+        android:theme="@style/AppTheme"
+        android:allowBackup="false"
+        android:supportsRtl="true">
+        <activity android:name=".MainActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".ChapterListActivity" android:exported="false" />
+        <activity android:name=".KnowledgeActivity" android:exported="false" />
+        <activity android:name=".KnowledgeDetailActivity" android:exported="false" />
+        <activity android:name=".QuizActivity" android:exported="false" />
+        <activity android:name=".QuizResultActivity" android:exported="false" />
+        <activity android:name=".LabActivity" android:exported="false" />
+        <activity android:name=".WrongBookActivity" android:exported="false" />
+        <activity android:name=".StatisticsActivity" android:exported="false" />
+        <activity android:name=".FavoritesActivity" android:exported="false" />
+        <activity android:name=".NavigationActivity" android:exported="false" />
+        <activity android:name=".MessageActivity" android:exported="false" />
+    </application>
+</manifest>

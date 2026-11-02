@@ -1,0 +1,32 @@
+[
+  {
+    "chapterId": 1,
+    "title": "走进 Android",
+    "description": "系统、历史与开发环境",
+    "available": true
+  },
+  {
+    "chapterId": 2,
+    "title": "第一个 Android 应用",
+    "description": "工程结构与运行调试",
+    "available": true
+  },
+  {
+    "chapterId": 3,
+    "title": "UI 设计基础",
+    "description": "View 与布局管理器",
+    "available": true
+  },
+  {
+    "chapterId": 4,
+    "title": "常用 UI 组件",
+    "description": "控件、事件与适配器",
+    "available": true
+  },
+  {
+    "chapterId": 5,
+    "title": "页面跳转",
+    "description": "Activity 生命周期、Bundle、返回结果与 Fragment",
+    "available": true
+  }
+]

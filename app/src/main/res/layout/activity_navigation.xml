@@ -1,0 +1,72 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/nav_intro"
+                style="@style/Caption"
+                android:text="显式 Intent + Bundle 传值；子页面 setResult() 返回结果；切换 Fragment 观察局部界面。" />
+            <EditText
+                android:id="@+id/et_message"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:hint="输入想传给另一个页面的学习目标"
+                android:inputType="textCapSentences"
+                android:maxLength="100" />
+            <Button
+                android:id="@+id/btn_send_message"
+                style="@style/ActionButton"
+                android:text="打开另一个 Activity 并等待返回" />
+            <TextView
+                android:id="@+id/tv_returned_message"
+                style="@style/CardText"
+                android:text="尚未收到返回结果" />
+            <TextView
+                android:id="@+id/nav_fragment_heading"
+                style="@style/Heading"
+                android:text="Fragment 局部页面" />
+            <Button
+                android:id="@+id/btn_fragment_guide"
+                style="@style/ActionButton"
+                android:text="显示学习步骤 Fragment" />
+            <Button
+                android:id="@+id/btn_fragment_check"
+                style="@style/ActionButton"
+                android:text="显示自查清单 Fragment" />
+            <FrameLayout
+                android:id="@+id/fragment_host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="160dp" />
+            <TextView
+                android:id="@+id/nav_lifecycle_heading"
+                style="@style/Heading"
+                android:text="当前 Activity 的生命周期记录" />
+            <TextView
+                android:id="@+id/tv_lifecycle"
+                style="@style/CardText"
+                android:text="" />
+            <TextView
+                android:id="@+id/nav_note"
+                style="@style/Caption"
+                android:text="可打开子页面、按 Home 后回来，观察记录。生命周期日志同时输出到 Logcat，标签为 FinStudyLifecycle。" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_identity" />
+</LinearLayout>

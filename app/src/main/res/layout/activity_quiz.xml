@@ -1,0 +1,113 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tv_quiz_rules"
+                style="@style/Caption"
+                android:text="每章 10 题：7 道单选、3 道多选。多选必须全部选对，未答按错误处理。" />
+            <Spinner
+                android:id="@+id/sp_quiz_chapter"
+                android:layout_width="match_parent"
+                android:layout_height="56dp" />
+            <Button
+                android:id="@+id/btn_start_quiz"
+                style="@style/ActionButton"
+                android:text="开始测验" />
+            <LinearLayout
+                android:id="@+id/quiz_area"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:visibility="gone">
+                <TextView
+                    android:id="@+id/tv_question_position"
+                    style="@style/Caption"
+                    android:text="" />
+                <TextView
+                    android:id="@+id/tv_question_stem"
+                    style="@style/CardText"
+                    android:text="" />
+                <RadioGroup
+                    android:id="@+id/rg_answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+                    <RadioButton
+                        android:id="@+id/rb_answer_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                    <RadioButton
+                        android:id="@+id/rb_answer_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                    <RadioButton
+                        android:id="@+id/rb_answer_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                    <RadioButton
+                        android:id="@+id/rb_answer_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                </RadioGroup>
+                <LinearLayout
+                    android:id="@+id/multi_answers"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <CheckBox
+                        android:id="@+id/cb_answer_0"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                    <CheckBox
+                        android:id="@+id/cb_answer_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                    <CheckBox
+                        android:id="@+id/cb_answer_2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                    <CheckBox
+                        android:id="@+id/cb_answer_3"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:minHeight="48dp" />
+                </LinearLayout>
+                <Button
+                    android:id="@+id/btn_previous_question"
+                    style="@style/ActionButton"
+                    android:text="上一题" />
+                <Button
+                    android:id="@+id/btn_next_question"
+                    style="@style/ActionButton"
+                    android:text="下一题" />
+                <Button
+                    android:id="@+id/btn_submit_quiz"
+                    style="@style/ActionButton"
+                    android:text="提交并查看解析" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_identity" />
+</LinearLayout>

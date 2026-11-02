@@ -1,0 +1,20 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <ListView
+        android:id="@+id/demo_list"
+        android:layout_width="match_parent"
+        android:layout_height="216dp" />
+    <TextView
+        android:id="@+id/demo_list_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="点击列表中的一项"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:padding="8dp" />
+</LinearLayout>

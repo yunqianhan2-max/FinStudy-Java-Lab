@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <LinearLayout
+        android:id="@+id/demo_layout_row"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="控件 A"
+            android:textColor="#FFFFFF"
+            android:background="#B53B70" />
+        <TextView
+            android:layout_width="96dp"
+            android:layout_height="56dp"
+            android:gravity="center"
+            android:text="控件 B"
+            android:textColor="#333333"
+            android:background="#FBE9F0" />
+    </LinearLayout>
+    <Button
+        android:id="@+id/demo_layout_toggle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="48dp"
+        android:text="切换为纵向排列" />
+    <TextView
+        android:id="@+id/demo_layout_state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前：horizontal 横向排列"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:padding="8dp" />
+</LinearLayout>

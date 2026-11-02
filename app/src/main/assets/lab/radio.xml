@@ -1,0 +1,33 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="16dp">
+    <RadioGroup
+        android:id="@+id/demo_radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RadioButton
+            android:id="@+id/demo_radio_preview"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="课前预习" />
+        <RadioButton
+            android:id="@+id/demo_radio_review"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:minHeight="48dp"
+            android:text="课后复习" />
+    </RadioGroup>
+    <TextView
+        android:id="@+id/demo_radio_result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="当前选择：未选择"
+        android:textSize="16sp"
+        android:textColor="#333333"
+        android:padding="8dp" />
+</LinearLayout>

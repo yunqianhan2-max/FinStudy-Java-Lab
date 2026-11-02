@@ -1,0 +1,100 @@
+<?xml version='1.0' encoding='utf-8'?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/screen_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/page">
+    <include layout="@layout/view_toolbar" />
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="20dp">
+            <TextView
+                android:id="@+id/tv_knowledge_title"
+                style="@style/Heading"
+                android:text="" />
+            <TextView
+                android:id="@+id/tv_source"
+                style="@style/Caption"
+                android:text="" />
+            <TextView
+                android:id="@+id/tv_concept"
+                style="@style/CardText"
+                android:text="" />
+            <TextView
+                android:id="@+id/detail_core_heading"
+                style="@style/Heading"
+                android:text="核心属性与方法" />
+            <TextView
+                android:id="@+id/tv_core"
+                style="@style/Body"
+                android:text="" />
+            <TextView
+                android:id="@+id/detail_code_heading"
+                style="@style/Heading"
+                android:text="代码示例" />
+            <TextView
+                android:id="@+id/tv_code"
+                style="@style/CardText"
+                android:text=""
+                android:fontFamily="monospace"
+                android:textSize="13sp"
+                android:textIsSelectable="true" />
+            <TextView
+                android:id="@+id/detail_note_heading"
+                style="@style/Heading"
+                android:text="易错提醒" />
+            <TextView
+                android:id="@+id/tv_note"
+                style="@style/Body"
+                android:text="" />
+            <CheckBox
+                android:id="@+id/cb_mastered"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:minHeight="48dp"
+                android:text="已掌握这个知识点" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical">
+                <ImageButton
+                    android:id="@+id/ib_favorite"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:src="@android:drawable/btn_star_big_on"
+                    android:contentDescription="收藏知识点" />
+                <TextView
+                    android:id="@+id/tv_favorite_label"
+                    style="@style/Body"
+                    android:text="收藏重点" />
+            </LinearLayout>
+            <Button
+                android:id="@+id/btn_previous_knowledge"
+                style="@style/ActionButton"
+                android:text="上一知识点" />
+            <Button
+                android:id="@+id/btn_next_knowledge"
+                style="@style/ActionButton"
+                android:text="下一知识点" />
+            <Button
+                android:id="@+id/btn_related_quiz"
+                style="@style/ActionButton"
+                android:text="练习本章" />
+            <Button
+                android:id="@+id/btn_return_directory"
+                style="@style/ActionButton"
+                android:text="返回知识目录" />
+        </LinearLayout>
+    </ScrollView>
+    <include layout="@layout/view_identity" />
+</LinearLayout>
